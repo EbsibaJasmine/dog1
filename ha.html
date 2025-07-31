@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petopia Background</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: white;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 60%;
+      height: 100%;
+      background: #fdd63b;
+      clip-path: ellipse(80% 90% at 90% 30%);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      padding: 50px;
+      max-width: 600px;
+      bottom: 450px;
+      animation: slideFromLeft 1.2s ease-out forwards;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    .post {
+      position: relative;
+      bottom: 100px;
+      left: 550px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      color: #f7931e;
+      text-align: center;
+      display: inline;
+    }
+
+    .D1C1 {
+      position: relative;
+      left: 0px;
+      top: 140px;
+      height: 200px;
+      width: auto;
+    }
+
+    .human {
+      position: relative;
+      top: 140px;
+      right: 800px;
+      height: 200px;
+      width: auto;
+    }
+
+    .pet {
+      position: relative;
+      bottom: 100px;
+      right: 250px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 28px;
+      color: #f7931e;
+      text-align: center;
+      display: inline;
+    }
+
+    .welcome {
+      position: relative;
+      top: 10px;
+      text-align: left;
+      text-decoration: none;
+      animation: slideFromLeft 1.2s ease-out forwards;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .name {
+      position: relative;
+      bottom: -150px;
+      right: -90px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;
+      color: #f7931e;
+      text-align: center;
+      display: inline;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .n {
+      position: relative;
+      top: 150px;
+      text-align: left;
+      text-decoration: none;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .adopt {
+      position: relative;
+      top: 150px;
+      text-align: left;
+      text-decoration: none;
+      color: #f7931e;
+      text-align: center;
+      display: inline;
+      right: -90px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .adopt2 {
+      position: relative;
+      top: 150px;
+      text-align: left;
+      text-decoration: none;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+      
+    }
+
+    .res {
+      position: relative;
+      top: 150px;
+      text-align: left;
+      text-decoration: none;
+      color: #f7931e;
+      text-align: center;
+      display: inline;
+      right: -90px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .clss {
+      position: relative;
+      top: 150px;
+      text-align: left;
+      text-decoration: none;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .hole {
+      position: relative;
+      left: 600px;
+      bottom: 260px;
+    }
+
+    .info {
+      position: relative;
+      left: 600px;
+      bottom: 270px;
+      color: orange;
+      font-weight: bold;
+    }
+
+    .wel2 {
+      position: relative;
+      top: -5px;
+      left: 100px;
+      text-decoration: none;
+      animation: slideFromLeft 1.2s ease-out forwards;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .cont2 {
+      position: relative;
+      bottom: 130px;
+      animation: slideFromLeft 1.2s ease-out forwards;
+      
+    }
+
+    .img {
+      position: relative;
+      left: 800px;
+      opacity: 0; /* Start hidden */
+      animation: fadeIn 2s ease-in-out forwards;
+      animation-delay: 0.5s;
+    }
+
+    .btn {
+      position: relative;
+      left: 1000px;
+      bottom: 240px;
+    }
+     .form-label {
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .btn-orange {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      border: none;
+    }
+    .btn-orange:hover {
+      background-color: darkorange;
+    }
+      .hole{
+        position: relative;
+        left: 900px;
+        bottom: 460px;
+    }
+
+    /* Animations */
+    @keyframes slideFromLeft {
+      0% {
+        transform: translateY(-80px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.85);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .slide-left {
+      animation: slideFromLeft 1.00s ease-out forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <img src="h1d1-removebg-preview.png" alt="" class="img">
+    <div class="content">
+      <h4>WE CARE FOR YOUR PETS</h4>
+      <h1>We Help You Care for Pets with Nutrition</h1>
+      <p class="welcome">Welcome to our pet adoption program! Adopting a pet is a wonderful way to bring joy</p>
+      <p class="wel2">and companionship into your life.</p>
+
+      <div class="cont2">
+        <h2 class="name">Name: Benefits of Pet Adoption </h2>
+        <p class="n">Provide a loving home to a pet in need <br>Pet Age: Experience the unconditional love of a pet <br> Create lasting memories and cherished moments </p>
+        
+        <div class="slide-left">
+          <h2 class="adopt">Adoption Process</h2>
+          <p class="adopt2">Fill out an adoption application <br> Location: Meet potential pets in person <br> Complete the necessary Paperwork </p>
+        </div>
+
+        <div class="slide-left">
+          <h2 class="res">Responsibilities</h2>
+          <p class="clss">Type: Adopting a pet comes with responsibilities, including feeding, grooming, regular <br> exercise, and providing medical care.</p>
+        </div>
+      </div>
+
+      <h2 class="btn">Pet Information</h2>
+            
+    <img src="h1d1-removebg-preview.png" alt="" class="D1C1">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap" rel="stylesheet">
+    <form>
+        <div class="hole">
+          
+              <!-- Name -->
+        <div class="petname" style="margin: 10px;">
+        <label class="form-label">Name:</label>
+        <input type="text" class="form" placeholder="Enter pet's name">
+      </div> 
+
+      <!-- Pet Age -->
+      <div class="age"  style="margin: 10px;">
+        <label class="form-label" >Pet Age:</label>
+        <input type="number" class="form" placeholder="Enter pet's age">
+      </div>
+
+      <!-- Picture -->
+      <div class="pic"  style="margin: 10px;">
+        <label class="form-label ">Picture:</label>
+        <input type="file" class="form file" id="petPicture">
+      </div>
+
+      <!-- Location -->
+      <div class="loc"  style="margin: 10px;">
+        <label class="form-label">Location:</label>
+        <input type="text" class="form" placeholder="Enter location">
+      </div>
+
+      <!-- Type -->
+      <div class="just" style="padding: 10px;">
+        <label class="form-label">Type:</label>
+        <select class="form-select">
+          <option selected>None</option>
+          <option>Dog</option>
+          <option>Cat</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Justification -->
+      <div class="loc">
+        <label class="form-label">Justification for giving a pet:</label>
+        <textarea class="form" rows="3" placeholder="Write your reason..."></textarea>
+      </div>
+      <!-- submit -->
+      <div class="text-center" style="margin: 5px;">
+        <button type="submit" class=" bottonorange">Submit</button>
+      </div>
+
+     
+        </select>
+      </div>
+      </div>
+    </form>
+    </div>
+  </div>
+
+</body>
+</html>

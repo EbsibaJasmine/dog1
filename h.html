@@ -1,0 +1,93 @@
+form {
+  max-width: 600px;   /* Keeps form from being too wide */
+  margin: auto;
+  padding: 15px;
+  background: transparent;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
+  gap: 15px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input, select, textarea, button {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  grid-column: span 2;  /* Button takes full width in 2-column layout */
+  background: orange;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+@media (max-width: 600px) {
+  form {
+    grid-template-columns: 1fr; /* Switch to single column on mobile */
+  }
+
+  button {
+    grid-column: span 1;
+  }
+}
+
+
+---
+
+Updated HTML (cleaned up)
+
+<form>
+  <div>
+    <label>Name:</label>
+    <input type="text" placeholder="Enter pet's name">
+  </div>
+
+  <div>
+    <label>Pet Age:</label>
+    <input type="number" placeholder="Enter pet's age">
+  </div>
+
+  <div>
+    <label>Picture:</label>
+    <input type="file">
+  </div>
+
+  <div>
+    <label>Location:</label>
+    <input type="text" placeholder="Enter location">
+  </div>
+
+  <div>
+    <label>Type:</label>
+    <select>
+      <option selected>None</option>
+      <option>Dog</option>
+      <option>Cat</option>
+      <option>Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Justification for giving a pet:</label>
+    <textarea rows="3" placeholder="Write your reason..."></textarea>
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
